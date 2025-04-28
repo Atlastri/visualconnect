@@ -15,9 +15,8 @@
 <body class="text-gray-800">
   <header class="flex justify-between items-center py-6 px-4 bg-white shadow-md">
     <div class="flex items-center space-x-2">
-      <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="#7C3AED">
-        <circle cx="50" cy="50" r="40" />
-      </svg>
+      <!-- Logo reemplazado -->
+      <img src="VisualConnect_Logo_Transparent_Clean.png" alt="Logo VisualConnect" class="w-10 h-10 object-cover rounded-full">
       <span class="text-2xl font-bold text-purple-800">VisualConnect</span>
     </div>
     <nav class="flex space-x-6 text-sm">
