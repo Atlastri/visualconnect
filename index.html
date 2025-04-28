@@ -17,13 +17,14 @@
     <div class="flex items-center space-x-2">
       <!-- Logo SVG incrustado -->
       <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="45" fill="#7C3AED"/>
+        <!-- Fondo circular -->
+        <circle cx="50" cy="50" r="48" fill="#7C3AED"/>
         <!-- Ojo (visión) -->
         <ellipse cx="50" cy="40" rx="18" ry="10" fill="#34D399"/>
-        <circle cx="50" cy="40" r="4" fill="#7C3AED"/>
+        <circle cx="50" cy="40" r="5" fill="#7C3AED"/>
         <!-- Cámara (conexión audiovisual) -->
-        <rect x="30" y="65" width="40" height="20" rx="3" ry="3" fill="#34D399"/>
-        <circle cx="50" cy="75" r="5" fill="#7C3AED"/>
+        <rect x="35" y="65" width="30" height="18" rx="3" ry="3" fill="#34D399"/>
+        <circle cx="50" cy="74" r="5" fill="#7C3AED"/>
       </svg>
       <span class="text-2xl font-bold text-purple-800">VisualConnect</span>
     </div>
@@ -35,4 +36,99 @@
     </nav>
   </header>
 
-  <!-- ... resto del código queda igual ... -->
+  <section id="inicio" class="text-center py-20 bg-gradient-to-r from-purple-300 via-purple-200 to-emerald-100">
+    <h1 class="text-4xl md:text-5xl font-bold text-purple-900 mb-6 leading-snug fade-in">
+      Publica lo que necesitas<br />y conecta con talento audiovisual
+    </h1>
+    <p class="text-gray-700 mb-8 fade-in">
+      Cuéntanos qué tipo de proyecto tienes y nosotros buscamos al equipo ideal para ti.
+    </p>
+    <button onclick="document.getElementById('publicar').scrollIntoView({ behavior: 'smooth' });"
+      class="px-8 py-3 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition transform hover:scale-105 shadow-md fade-in">
+      Publicar Proyecto
+    </button>
+  </section>
+
+  <section id="como" class="py-20 text-center bg-white">
+    <h2 class="text-3xl font-bold text-purple-800 mb-10">¿Cómo funciona?</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+      <div class="p-8 bg-purple-50 rounded-lg shadow hover:shadow-lg transition-all fade-in">
+        <i class="fas fa-bullhorn text-4xl text-purple-700 mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Publica tu proyecto</h3>
+        <p>Completa el formulario con los detalles del servicio que necesitas.</p>
+      </div>
+      <div class="p-8 bg-emerald-50 rounded-lg shadow hover:shadow-lg transition-all fade-in">
+        <i class="fas fa-paper-plane text-4xl text-emerald-600 mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Revisamos tu requerimiento</h3>
+        <p>Analizamos la solicitud y buscamos al equipo adecuado internamente.</p>
+      </div>
+      <div class="p-8 bg-purple-50 rounded-lg shadow hover:shadow-lg transition-all fade-in">
+        <i class="fas fa-handshake text-4xl text-purple-700 mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Te conectamos</h3>
+        <p>Nos ponemos en contacto contigo con las mejores opciones para tu proyecto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="publicar" class="py-20 bg-emerald-50 text-center">
+    <h2 class="text-3xl font-bold text-purple-800 mb-10">Publicar Proyecto</h2>
+    <p class="text-gray-700 mb-6">Completa el siguiente formulario y nos pondremos en contacto contigo.</p>
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow">
+      <form action="https://formsubmit.co/crisperezmardones@gmail.com" method="POST">
+        <div class="mb-4 text-left">
+          <label class="block text-sm font-medium mb-1">Tipo de proyecto:</label>
+          <select name="Tipo de proyecto" class="w-full border border-gray-300 rounded px-3 py-2" required>
+            <option value="">Selecciona...</option>
+            <option>Video / Cápsulas / Streaming</option>
+            <option>Fotografía de Producto / Bodegón / E-commerce</option>
+            <option>Campañas Publicitarias</option>
+            <option>Reels y Contenido para Redes Sociales</option>
+            <option>Eventos y Cobertura Audiovisual</option>
+            <option>Testimoniales / Institucional / Corporativo</option>
+            <option>Edición / Postproducción / Retoque</option>
+            <option>Animación / Motion Graphics</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="mb-4 text-left">
+          <label class="block text-sm font-medium mb-1">Requerimientos específicos:</label>
+          <textarea name="Requerimientos específicos" class="w-full border border-gray-300 rounded px-3 py-2" required></textarea>
+        </div>
+        <div class="mb-4 text-left">
+          <label class="block text-sm font-medium mb-1">Fecha estimada:</label>
+          <input type="date" name="Fecha estimada" class="w-full border border-gray-300 rounded px-3 py-2" required>
+        </div>
+        <div class="mb-4 text-left">
+          <label class="block text-sm font-medium mb-1">Nombre:</label>
+          <input type="text" name="Nombre" class="w-full border border-gray-300 rounded px-3 py-2" required>
+        </div>
+        <div class="mb-4 text-left">
+          <label class="block text-sm font-medium mb-1">Email:</label>
+          <input type="email" name="Email" class="w-full border border-gray-300 rounded px-3 py-2" required>
+        </div>
+        <button type="submit" class="w-full py-3 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition transform hover:scale-105 shadow-md">
+          Enviar solicitud
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section id="contacto" class="py-20 bg-white text-center">
+    <h2 class="text-3xl font-bold text-purple-800 mb-6">Contacto</h2>
+    <p class="text-gray-700 mb-4">Si tienes dudas o consultas, escríbenos a:</p>
+    <p class="font-semibold text-purple-700">contacto@visualconnect.cl</p>
+  </section>
+
+  <footer class="bg-purple-800 text-white py-6 text-center">
+    <p>&copy; 2025 VisualConnect. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        setTimeout(() => el.classList.add('visible'), 200);
+      });
+    });
+  </script>
+</body>
+</html>
